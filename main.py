@@ -36,7 +36,14 @@ def route_verify_hash_password():
     hashed_value_to_verify = request.args.get('hash')
     verify_second_password = verify_password(password_input_to_verify, hashed_value_to_verify)
 
-    return render_template('password.html', verify_second_password=verify_second_password)
+    if verify_second_password:
+        verify_value = False
+    else:
+        verify_value = True
+
+
+    return render_template('password.html', password_input_to_verify=password_input_to_verify,
+                           hashed_value_to_verify=hashed_value_to_verify, verify_second_password=verify_second_password, verify_value=verify_value)
 
 
 

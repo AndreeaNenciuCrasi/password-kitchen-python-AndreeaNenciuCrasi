@@ -1,10 +1,8 @@
 body{
-    margin-top: 160px;
-    margin-bottom: 160px;
-    margin-left: 350px;
-    margin-right: 310px;
     background-color: #1976d2;
     font-family: 'Montserrat', sans-serif;
+    display: grid;
+    justify-items: center;
 }
 
 .card{
@@ -58,4 +56,16 @@ div [type=submit]{
     border: 1px solid #01579b;
     color: #222;
     font-size: 25px;
+}
+
+#matchtext{
+    color: #43a047;
+    font-size: 30px;
+    text-align: center;
+}
+
+#failtext{
+    color: #e53935;
+    font-size: 30px;
+    text-align: center;
 }
